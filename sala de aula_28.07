@@ -1,0 +1,83 @@
+A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário que trabalhar mais
+de 40 horas receberá hora extra, cujo cálculo é o valor da hora regular com um acréscimo de 50%
+Escreva um algoritmo que leia o número de horas trabalhadas em um mês, o salário por hora e escreva
+o salário total do funcionário, que deverá ser acrescido das horas extras, caso tenham sido trabalhadas
+(considere que o mês possua 4 semanas exatas)
+
+<?php
+$hora_trabalhada = 5.35;
+$hora_extra = $hora_trabalhada + ($hora_trabalhada / 2);
+$tempo = 35;
+
+if($tempo == 40){
+	echo "Seu sálario semanal é: ".($hora_trabalhada * 8) * 7 ."\n";
+	echo "Seu sálario Mensal é: ".($hora_trabalhada * 8)* 7 * 4;
+} else if ($tempo > 40){
+	echo "Seu sálario semanal é: ".($hora_trabalhada * 8) * 7 + ($hora_extra * ($tempo - 40))."\n";
+	echo "Seu sálario Mensal é: ".($hora_trabalhada * 8) * 7 * 4 + ($hora_extra * ($tempo - 40));
+} else {
+	echo "Jornada de trabalho insuficiente";
+}
+?>
+//////////////////////////////////////////////////////////
+
+Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome
+do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.
+
+<?php
+$time1 = ["Corinthians", 6];
+$time2 = ["Flamengo", 6];
+$gol1 = $time1[1];
+$gol2 = $time2[1];
+
+if($gol1 > $gol2){
+	echo $time1[0]." Vencedor!";
+} else if($gol1 < $gol2){
+	echo $time2[0]." Vencedor!";
+} else{
+	echo "O jogo acabou em Empate!";
+}
+?>
+//////////////////////////////////////////////////////////
+
+Ler dois valores e imprimir uma das três mensagens a seguir:
+‘Números iguais’, caso os números sejam iguais
+‘Primeiro é maior’, caso o primeiro seja maior que o segundo;
+‘Segundo maior’, caso o segundo seja maior que o primeiro.
+
+<?php
+$valor = [1,2];
+ 
+ if($valor[0] > $valor[1]){
+ 	echo "O primeiro é maior";
+ } else if($valor[0] < $valor[1]){
+ 	echo "O segundo é maior";
+ } else {
+ 	echo "Números Iguais";
+ }
+?>
+//////////////////////////////////////////////////////////
+
+Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem
+crescente.
+
+<?php
+$numeros = [5,3,1,8,4,2,7,9,10,6];
+sort($numeros);
+print_r($numeros);
+?>
+//////////////////////////////////////////////////////////
+
+ Escreva um algoritmo para imprimir os 10 primeiros números inteiros maiores que 100.
+ 
+ <?php
+$x = 0;
+$y = 100;
+
+while ($x < 10){
+	$x = $x + 1;
+	echo "O numero é: ".$x+$y. "\n";
+	
+}
+?>
+
